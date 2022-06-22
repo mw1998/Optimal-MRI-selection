@@ -1,15 +1,11 @@
-
-from cProfile import label
 import os
 import cv2
 import numpy as np
 import tensorflow as tf
 from PIL import Image
-from tensorflow.python.ops.array_ops import required_space_to_batch_paddings
 from tqdm import tqdm
 import shutil
 
-from urllib3 import Retry
 
 from ssdforselect import SSD
 
@@ -92,4 +88,3 @@ if __name__ == "__main__":
                 os.makedirs(path)
 
             shutil.copy(file_result[0], path + os.sep + os.path.split(file_result[0])[1])        
-
